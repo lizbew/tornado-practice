@@ -1,0 +1,3 @@
+[submodule "questans/static/closure-library"]
+	path = questans/static/closure-library
+	url = http://code.google.com/p/closure-library
