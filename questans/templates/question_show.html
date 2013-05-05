@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} Question Detail - {{ question.id }} {% end %}
+
+{% block content%}
+  <div>
+    <p>{{ question.content }}</p>
+    <span>by {{ question.auth }}, {{ len(question.ans) }} Answers.</span>
+  </div>
+
+  <div>
+    <form name="ansform" method="post" action="/q/{{ question.id }}/answer/">
+       <label for="ansinp">My Answer:</label>
+       <input type="text" name="answer" />
+       <input type="submit" value="Answer" />
+    </form>
+  </div>
+  <div>
+    <h3>All Answers</h3>
+    <ul>
+    {% for a in question.ans %}
+        <li>{{ a.auth }} - {{a.content}}</li>
+    {% end  %}
+    <ul>
+  </div>
+{% end %}

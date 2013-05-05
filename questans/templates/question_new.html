@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title%} New Question {% end %}
+
+{% block content %}
+<form name="quesform" method="post">
+<label for="questinp">Question:</label><input type="text" id="questinp" name="question" />
+<input type="submit" value="submit" />
+</form>
+{% end %}

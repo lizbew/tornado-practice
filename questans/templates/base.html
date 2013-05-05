@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>{% block title %} Question and Answer {% end %}</title>
+</head>
+<body>
+  <div>
+    <div id="header">
+      welcome, {{ current_user }} 
+      <a href="/">Home</a> 
+      <a href="/q/">New Question</a>
+      <a href="/auth/logout">Logout</a>
+    </div>
+    <div id="content">
+    {% block content %}Hello{% end %}
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %} Welcome - Question &amp; Answer {% end %}
+
+{% block content%}
+{% for q in all_ques %}
+  <div>
+    <p><a href="/q/{{ q.id }}/">{{ q.content }}</a></p>
+    <span>by {{ q.auth }}, {{ len(q.ans) }} Answers.</span>
+  </div>
+{% end %}
+{% end %}
